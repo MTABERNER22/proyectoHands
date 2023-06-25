@@ -1,0 +1,582 @@
+* {
+    font-family: 'Playfair Display';
+    margin: 0;
+    padding: 0;
+}
+
+/** Inicio **/
+
+.hero {
+    background: url(../images/cremas-para-cuidado-de-manos.jpg) no-repeat;
+    background-size: cover;
+    color: white;
+    margin-top: 4.5rem;
+}
+
+/** Novedades **/
+
+.lista-novedades {
+    margin-top: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.lista-novedades li {
+    margin: 6px 0;
+    color: #a0a0a0;
+}
+
+.lista-novedades li a {
+    padding: 0.9rem 0.9rem;
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all .2s ease-in-out;
+    display: block;
+    height: 60px;
+    border-radius: 0.4rem;
+    text-decoration: none;
+}
+
+.lista-novedades li a:hover {
+    background-color: #dadada;
+    opacity: 1;
+    margin-left: 0.1rem;
+}
+
+
+/*--Testimonios--*/
+
+.testimonio {
+    text-align: center;
+    padding: 50px 20px;
+    margin-left: 0;
+}
+
+
+/** Productos **/
+
+
+.card-img {
+    height: 100%;
+    width: 100%;
+}
+
+.productos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content {
+    margin: 0 60px;
+    overflow: hidden;
+}
+
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px;
+}
+
+.productoCard {
+    border: none;
+    border-radius: 0;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.swiper-navBtn {
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+    color: black;
+}
+
+
+/** Nosotros **/
+.nosotrosCard {
+    margin: 0.5em;
+    width: calc(100%/3);
+    border: none;
+    border-radius: 0;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+}
+
+
+/** Preguntas Frecuentes **/
+
+.preguntas {
+    overflow: scroll;
+}
+
+/** Login **/
+.loginContainer {
+    height: 500px;
+}
+
+.login{
+    min-height: 50vh;
+    display: flex;
+  align-items: center;
+    justify-content: center;
+}
+
+.loginForm {
+    width: 30rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    border: 1px solid grey;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 3px rgba(22, 22, 26, 0.18);
+}
+
+.alertLogin {
+    width: 20rem;
+    margin-top: 1rem;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+/** BotonBuscar Novedades **/
+.botonBuscar{
+    width: 15rem; 
+    height: 2.60rem; 
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    text-align: center;
+}
+
+/** descripcion **/
+.containerDescripcion{
+    background-color: rgb(226, 223, 223);
+   
+}
+
+.descripcion{
+    background-color: #f6f3f3;
+}
+
+
+.imgDescripcion{
+    height: 100%;
+    width: 100%;
+}
+
+
+.textTitulo{
+    text-align: center;
+    text-transform:uppercase;
+}
+
+/** MediasQuerys **/
+
+@media(min-width: 480px) {
+    .hero {
+        height: 400px;
+    }
+
+    .home h1 {
+        text-align: center;
+    }
+
+    .home p {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #novedadesTestimonios {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .lista-novedades li a {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .rounded {
+        padding: 2rem 0rem 0rem 0rem;
+    }
+
+    .tituloTestimonios {
+        text-align: center;
+    }
+
+    #nosotros {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .tituloNosotros {
+        margin-left: 5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-deck {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .textNosotros {
+        font-size: 10px;
+    }
+
+    #conocenos {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .visitanos {
+        margin-bottom: 2rem;
+    }
+
+    .input-group input {
+        width: 12rem;
+    }
+
+    .nomApll {
+        margin-right: 0.5rem;
+    }
+
+    .preguntas {
+        height: 109rem;
+    }
+
+    .card-image {
+        height: 40vw;
+    }
+    
+    .productos {
+        min-height: 80vh;
+    }
+
+    .containerDescripcion{
+        min-height: 130vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+    }
+
+    .descripcion{
+        margin: auto;
+        max-width: 400px;
+        min-height: 700px;
+    }
+
+    .contenidoText{
+        padding: 3rem 2rem 2rem 2rem;
+    }
+    
+    .textTitulo{
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .precioDescripcion{
+        text-align: center;
+        font-size: 20px;
+    }
+    
+
+}
+
+@media(min-width: 576px) {
+    .visitanos {
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+
+    .textContactanos {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .contactanos {
+        padding: 0rem 1rem 0rem 1rem;
+    }
+
+    .input-group input {
+        width: 14rem;
+    }
+
+    .nomApll {
+        margin-right: 1rem;
+    }
+
+    .preguntas {
+        height: 79.5rem;
+    }
+
+    .card-image {
+        height: 25vw;
+    }
+    
+    .productos {
+        min-height: 75vh;
+    }
+
+
+}
+
+@media(min-width: 768px) {
+    .home h1 {
+        text-align: left;
+        margin-left: 1rem;
+    }
+
+    .home p {
+        margin-left: 2rem;
+        margin-right: 9rem;
+    }
+
+    #novedadesTestimonios {
+        padding: 2rem 2rem 2rem 2rem;
+    }
+
+    .lista-novedades li a {
+        font-size: 1.2rem;
+    }
+
+    #nosotros {
+        padding: 2rem 2rem 2rem 2rem;
+    }
+
+    .textNosotros {
+        font-size: 12px;
+    }
+
+    .contactanos {
+        padding: 0rem 2rem 0rem 2rem;
+    }
+
+
+    .input-group input {
+        width: 19rem;
+    }
+
+    .nomApll {
+        margin-right: 1rem;
+    }
+
+    .preguntas {
+        height: 55rem;
+    }
+
+    .card-image {
+        height: 22vw;
+    }
+  
+    
+    .productos {
+        min-height: 77vh;
+    }
+    
+
+}
+
+@media(min-width: 992px) {
+    .home {
+        margin-left: 2rem;
+    }
+
+    .home p {
+        margin-right: 35rem;
+        font-size: 15px;
+    }
+
+    #novedadesTestimonios {
+        padding: 3rem 3rem 3rem 3rem;
+    }
+
+    .novedades {
+        padding-bottom: 1rem;
+    }
+
+    .lista-novedades li a {
+        font-size: 1.4rem;
+    }
+
+
+    #nosotros {
+        padding-bottom: 3rem;
+    }
+
+    .textNosotros {
+        font-size: 14px;
+    }
+
+    .contactanos {
+        padding: 0rem 3rem 0rem 3rem;
+    }
+
+    .input-group input {
+        width: 24rem;
+    }
+
+    .nomApll {
+        margin-right: 3rem;
+    }
+
+    .preguntas {
+        height: 48rem;
+    }
+
+    .card-image {
+        height: 18vw;
+    }
+    
+    .productos {
+        min-height: 80vh;
+    }
+
+    .containerDescripcion{
+        min-height: 90vh;
+    }
+
+    .descripcion{
+        max-width: 900px;
+        min-height: 450px; 
+        display: flex;
+        border-radius: 5px;
+    }
+    
+    .contenidoImg{
+        min-width:450px;
+        max-height: 450px;
+    }
+
+
+    .contenidoText{
+        max-height: 400px;
+        padding: 4rem 2rem 1rem 2rem;
+    }
+
+    .textDescripcion{
+        font-size: 15px;
+    }
+    
+    .textTitulo{
+        font-size: 25px;
+        margin-bottom: 1.5rem;
+    }
+
+}
+
+
+@media(min-width: 1200px) {
+    .hero {
+        min-height: 540px;
+    }
+
+    .home {
+        margin-left: 13rem;
+    }
+
+    .home p {
+        margin-left: 1rem;
+        margin-right: 50rem;
+        font-size: 16px;
+    }
+
+    .flexFilaNovTest {
+        display: flex;
+    }
+
+    .lista-novedades li a {
+        font-size: 1.2rem;
+        text-align: left;
+        width: 30rem;
+    }
+
+    .novedades {
+        margin-left: 12rem;
+    }
+
+    .rounded {
+        width: 20rem;
+        padding: 3rem 0rem 3rem 0rem;
+    }
+
+
+    #nosotros {
+        padding: 3rem 4rem 4rem 4rem;
+    }
+
+    .card-deck {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: none;
+        text-align: none;
+    }
+
+    .tituloNosotros {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #conocenos {
+        display: flex;
+    }
+
+    .visitanos {
+        text-align: left;
+        padding-bottom: 0;
+        margin-left: 12rem;
+    }
+
+    .input-group input {
+        width: 14rem;
+    }
+
+    .nomApll {
+        margin-right: 1rem;
+    }
+
+    .textContactanos {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .preguntas {
+        height: 35rem;
+    }
+
+    .card-image {
+        height: 16vw;
+    }
+    .productos {
+        min-height: 90vh;
+    }
+
+    .containerDescripcion{
+        min-height: 95vh;
+    }
+
+    .descripcion{
+        max-width: 1100px;
+        min-height: 500px;
+    }
+
+    .contenidoImg{
+        min-width:600px;
+        max-height: 500px;
+    }
+
+    .contenidoText{
+        padding: 4rem 2rem 3rem 2rem;
+    }
+    
+    .textTitulo{
+        margin-bottom: 2rem;
+    }
+
+}

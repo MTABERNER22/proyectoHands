@@ -1,0 +1,39 @@
+<div class="container" style="margin:40px auto;  height: 500px;">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>MODIFICAR PRODUCTO</h4>
+            <br>
+            <form action="/admin/novedades/modificarProducto" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{producto.id}}" name="id">
+                <div class="mb-3">
+                    <label class="form-label">Titulo</label>
+                    <input type="text" class="form-control" name="tituloProducto" value="{{producto.tituloProducto}}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Subitulo</label>
+                    <input type="text" class="form-control" name="precioProducto" value="{{producto.precioProducto}}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Descripción</label>
+                    <textarea type="text" class="form-control" name="descripcion">{{producto.descripcion}}</textarea>
+                </div>
+                <div class="mb-3">
+                    <p>
+                        <label class="form-label" >Imagen <input class="form-control"  type="file" name="imagen" id="imagen"></label>
+                    </p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" id="img_delete" value="1"> ¿Eliminar imagen
+                            actual?</label>
+                        <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+                    </p>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+            {{#if error}}
+            <div class="alert alert-danger  alertLogin " role="alert">
+                {{message}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

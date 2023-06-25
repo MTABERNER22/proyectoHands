@@ -1,0 +1,114 @@
+<div class="container-fluid">
+    <div class="container" style="margin: 50px auto;">
+        <div class="row">
+            <div class="col">
+                <div class="text-center">
+                    <form action="/admin/novedades" class="form-inline " method="get">
+                        <input type="search" class="botonBuscar" type="search" placeholder="Buscar Producto o Novedad"
+                            aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i
+                                class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <p class="text-end">
+                    <span>Hola {{usuario}}!</span>
+                    <a href="/admin/login/logout" class="btn btn-danger">Cerrar Sesión<i
+                            class="fas fa-sign-out"></i></i></a>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-7" style="margin-top:-9px;">
+                <h2>LISTADO DE NOVEDADES</h2>
+            </div>
+            <div class="col-5 text-end">
+                <a href="/admin/novedades/agregarNovedad" class="btn btn-success"><i class="fas fa-plus"></i>Nuevo</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr class="table-dark">
+                            <th scope="col">#</th>
+                            <th scope="col">TITULOS</th>
+                            <th scope="col" class="text-end">ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each novedades}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{titulo}}</td>
+                            <td class="text-end">
+                                <a href="/admin/novedades/modificarNovedad/{{id}}" class="btn btn-secondary"><i
+                                        class="fas fa-pencil-alt"></i> </a>
+                                <a href="/admin/novedades/eliminar/{{id}} " class="btn btn-secondary"><i
+                                        class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                {{#if is_search}}
+                {{#unless novedades.length}}
+                No se encuentraron resultados para " <b>{{q}}</b> "
+                {{/unless}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container" style="margin: 50px auto;">
+        <div class="row">
+            <div class="col-7" style="margin-top:-9px;">
+                <h2>LISTADO DE PRODUCTOS</h2>
+            </div>
+            <div class="col-5 text-end">
+                <a href="/admin/novedades/agregarProducto" class="btn btn-success"><i class="fas fa-plus"></i>Nuevo</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr class="table-dark">
+                            <th scope="col">#</th>
+                            <th scope="col">TITULOS</th>
+                            <th scope="col">PRECIO</th>
+                            <th scope="col">IMAGEN</th>
+                            <th scope="col" class="text-end">ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each productos}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{tituloProducto}}</td>
+                            <td>{{precioProducto}}</td>
+                            <td>{{{imagen}}}</td>
+                            <td class="text-end">
+                                <a href="/admin/novedades/modificarProducto/{{id}} " class="btn btn-secondary"><i
+                                        class="fas fa-pencil-alt"></i> </a>
+                                <a href="/admin/novedades/eliminar/{{id}} " class="btn btn-secondary"><i
+                                        class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                     {{#if is_search}}
+            {{#unless productos.length}}
+            No se encuentraron resultados para " <b>{{q}}</b> "
+            {{/unless}}
+            {{/if}}
+            </div>
+        </div>
+    </div>
+</div>

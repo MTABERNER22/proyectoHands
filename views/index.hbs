@@ -1,0 +1,330 @@
+<!--MENU-->
+<nav class="navbar fixed-top  navbar-expand-lg" style=" background: linear-gradient(white, #81B5C7);">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#inicio"  style=" font-family: 'Qwitcher Grypen', cursive; font-size: 2rem;">Hands</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#productos">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/preguntasFrecuentes">Preguntas
+                        Frecuentes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#conocenos">Conocenos</a>
+                </li>
+            </ul>
+            <div>
+                <a class="text-end" style="color: black;"  aria-current="page" href="/admin/login"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--FinMenu-->
+
+<!--Inicio-->
+<div id="inicio" class="container-fluid">
+    <div id="home" class="row aling-items-center hero">
+        <div class="col home">
+            <h1 style=" font-family: 'Qwitcher Grypen', cursive; font-size: 10rem;"> Hands</h1>
+            <p class="textInicio">Queremos cuidar tu piel, por eso creamos productos
+                específicos para cada necesidad. Hands, un hábito para que
+                tu piel muestre lo mejor de vos.
+            </p>
+        </div>
+    </div>
+</div>
+<!--FinInicio-->
+
+
+<div id="novedadesTestimonios" class="container-fluid" style="background-color: #d5bdaf; ">
+    <div class=" flexFilaNovTest">
+
+        <!--Novedades-->
+        <div class="col novedades">
+            <h2>NOVEDADES</h2>
+            <ul class="lista-novedades ">
+                {{#each novedades}}
+                <li><a href="javascript:void(0);" style="color:  #a0a0a0;" data-bs-toggle="modal"
+                        data-bs-target="#Modal{{id}}">{{titulo}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+        {{#each novedades }}
+        <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">{{subtitulo}}</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"> {{ cuerpo }}</div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel2">Productos sin tacc</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        La celiaquía se está volviendo en una de las enfermedades mas comúnes en nuetra sociedad. Y
+                        entendemos el
+                        daño que puede generarle a una persona que padece esta enfermedad, síntomas que van desde
+                        una inlafamación,
+                        vómitos y demás, al aplicar un producto con gluten en su piel. Por lo que tomamos la
+                        desición de que
+                        nuestros productos sean libres de toda contaminación de cruzada.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel3">Próximamente Nueva Socursal</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Estamos contruyendo una nueva socursal en Av. Rivadavia al 57648.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FinNovedades-->
+
+        <!--Testimonios-->
+
+        <div class="col testimonios">
+            <div class="rounded" style="background-color: #dadada;">
+                <h2 class="tituloTestimonios">Testimonios</h2>
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <ol class="carousel-indicators" style="list-style: none;">
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
+                        </li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
+                        </li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4">
+                        </li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5">
+                        </li>
+                    </ol>
+                    <div class="carousel-inner  textoTestimonios">
+                        <div class="carousel-item active">
+                            <div class="testimonio">
+                                <h5>"Gracias a Hands pude sacarme las arruguitas y marcas de la vejez"</h5>
+                                <p>Marta, Morón</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonio">
+                                <h5>"Las cicatrices de mis quemaduras desaparecieron!!"</h5>
+                                <p>Roberto, flores</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonio">
+                                <h5>"Mis estrías y celulitis ya no son un problema"</h5>
+                                <p>Luiciana, Villa Ballester</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonio">
+                                <h5>"Rejuvenecí 35 años"</h5>
+                                <p>Mariano, Ituzaingó</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonio">
+                                <h5>"La variedad es espectacular, con ellos puedo confiar en que sus productos no
+                                    están testeados en
+                                    animales"</h5>
+                                <p>Julieta, San Antonio de Padua</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--FinTestimonios-->
+    </div>
+</div>
+
+
+
+<!-- Productos -->
+<div id="productos" class="container-fluid productos" style="background-color: #eddcd2;">
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                {{#each productos}}
+                <div class="card productoCard swiper-slide">
+                    <div class="card-image">
+                        <img src="{{imagen}}" alt="" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <p>{{tituloProducto}}</p>
+                        <p>{{precioProducto}}</p>    
+                        <a href="/detalle/{{id}}" id="{{id}}" class="btn btn-primary btn-md">Detalle</a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            </br>
+        </div>
+        <div class="swiper-button-next  swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn "></div>
+        </br>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+
+</div>
+
+<!-- FinProductos -->
+
+
+<!-- Nosotros -->
+<div class="container-fluid" id="nosotros" style="background-color: #a8bec6;">
+    <div>
+        <h2 class="tituloNosotros"><b> Nosotros </b></h2>
+        <div class="card-deck">
+
+            <div class="card nosotrosCard">
+                <img src="../images/Britney-51-29.webp" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-tittle">Mónica Gutierrez</h5>
+                    <p class="card-text textNosotros"><b>Médica especializada en Dermatología, 13 años en el
+                            rubro avalan mi
+                            experiencia.</b>
+                    </p>
+                </div>
+            </div>
+            <div class="card nosotrosCard">
+                <img src="../images/juan-minujin-regresa-a-la___2sNfb10mL_2000x1500__1.webp" class="card-img-top"
+                    alt="">
+                <div class="card-body">
+                    <h5 class="card-tittle">Juan Aguilera</h5>
+                    <p class="card-text textNosotros "><b>Licenciado en Cosmetología con posgrado en Tecnología
+                            Micelar, 7
+                            años en el rubro
+                            avalan mi experiencia.</b></p>
+                </div>
+            </div>
+            <div class="card nosotrosCard">
+                <img src="../images/images (1).jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Julieta Suarez</h5>
+                    <p class="card-text textNosotros "><b>Co-Fundadora de Hands. Licenciada en Cosmetología con
+                            posgrado en
+                            Dermatofarmacia,
+                            18 años avalan mi expeciencia.</b></p>
+                </div>
+            </div>
+            <div class="card nosotrosCard">
+                <img src="../images/HD-wallpaper-madonna-artist-young-bw-actress-black-white-singer.jpg"
+                    class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-tittle  ">Carolina Herrera</h5>
+                    <p class="card-text textNosotros "><b>Fundadora de Hands. Médica especializada en dermatología
+                            con
+                            posgrados en
+                            Cosmetología.</b></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- FinNosotros -->
+
+
+<!-- Conocenos -->
+<div id="conocenos" class="container-fluid" style="background: #b5838d">
+    <div id="conocenos">
+        <div class="col visitanos">
+            <h2>Visitanos</h2>
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.888861834071!2d-58.717624785432754!3d-34.657509580445605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbfeb5b6b363d%3A0x49911a6d54c38d9!2sMedrano%20951%2C%20Merlo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1661640467523!5m2!1ses-419!2sar"
+                    width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="contactanos">
+            <h2 class="textContactanos">Contáctanos</h2>
+            <form action="/" method="post">
+                <div class="input-group mb-3" style="display: flex;">
+                    <div class="nomApll">
+                        <label class="form-label" for="nombre">Nombres</label>
+                        <input type="text" class="form-control" id="nombres" placeholder="Nombres" name="nombre">
+                    </div>
+                    <div>
+                        <label class="form-label" for="apellido">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" name="apellido">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <div class="input-group " id="email">
+                        <input type="text" class="form-control" placeholder="Usuario" name="email">
+                        <span class="input-group-text" name="email">@</span>
+                        <input type="text" class="form-control" placeholder="Servidor" name="email">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+                    <div class="input-group mb-3  ">
+                        <span class="input-group-text" id="basic-addon1">+54</span>
+                        <input type="number" class="form-control" id="telefono" placeholder="teléfono/celular"
+                            aria-describedby="basic-addon1" name="telefono">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="3" name="mensaje"></textarea>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
+            {{#if message}}
+            <div class="alert alert-success" role="alert" style="width: 20rem; margin-top: 1rem;">
+                {{message}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>
+
+<!-- FinConocenos -->
