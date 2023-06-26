@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon ./bin/www",
-    "start": "nodemon ./bin/www" 
+    "start": "nodemon ./bin/wwwgdfgdfgdfgdg" 
   },
   "dependencies": {
     "bootstrap-icons": "^1.10.5",
