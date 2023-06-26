@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www" 
+    "dev": "node ./app.js",
+    "start": "node ./app.js" 
   },
   "dependencies": {
     "bootstrap-icons": "^1.10.5",
