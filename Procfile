@@ -1,1 +1,1 @@
-web: set PORT=3003 && react-scripts start
+web: nodemon ./bin/www
